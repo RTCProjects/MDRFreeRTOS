@@ -4,13 +4,12 @@
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_rst_clk.h"
 #include "MDR32F9Qx_port.h"
+#include "MDR32F9Qx_can.h"
+
 #include "FreeRTOSConfig.h"
 #include "FreeRTOS.h"
 
 #include "task.h"
-
-
-
 
 void vLed1(void *argument)
 {
@@ -42,8 +41,9 @@ void vApplicationIdleHook (void)
 void Port_Init()
 {
 	PORT_InitTypeDef PORT_InitStructure;
-	
-	RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTC, ENABLE);
+		
+		//Ports for LED
+		RST_CLK_PCLKcmd(RST_CLK_PCLK_PORTC, ENABLE);
 		
 		PORT_InitStructure.PORT_Pin   = PORT_Pin_0 | PORT_Pin_1;
     PORT_InitStructure.PORT_OE    = PORT_OE_OUT;
@@ -51,6 +51,21 @@ void Port_Init()
     PORT_InitStructure.PORT_MODE  = PORT_MODE_DIGITAL;
     PORT_InitStructure.PORT_SPEED = PORT_SPEED_FAST;
     PORT_Init(MDR_PORTC, &PORT_InitStructure);
+		
+	
+		//Ports for CAN
+		
+		  PORT_InitStructure.PORT_FUNC  = PORT_FUNC_ALTER;
+			PORT_InitStructure.PORT_Pin   = PORT_Pin_6;
+			PORT_InitStructure.PORT_OE    = PORT_OE_OUT;
+			PORT_InitStructure.PORT_MODE  = PORT_MODE_DIGITAL;
+			PORT_InitStructure.PORT_SPEED = PORT_SPEED_FAST;
+			PORT_Init(MDR_PORTF, &PORT_InitStructure);
+
+			PORT_InitStructure.PORT_Pin   = PORT_Pin_7;
+			PORT_InitStructure.PORT_OE    = PORT_OE_IN;
+			PORT_Init(MDR_PORTF, &PORT_InitStructure);
+		
 }
 
 void Clock_Init()

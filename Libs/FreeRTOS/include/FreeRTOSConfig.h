@@ -76,9 +76,9 @@ to exclude the API function. */
 See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 #define configMAX_SYSCALL_INTERRUPT_PRIORITY 	191 /* equivalent to 0xb0, or priority 11. */
 
-#define vPortSVCHandler SVC_Handler
-#define xPortPendSVHandler PendSV_Handler
-#define vPortSVCHandler SVC_Handler
+#define vPortSVCHandler 		SVC_Handler
+#define xPortPendSVHandler 	PendSV_Handler
+#define vPortSVCHandler 		SVC_Handler
 #define xPortSysTickHandler SysTick_Handler
 
 /* This is the value being used as per the ST library which permits 16
