@@ -10,6 +10,8 @@
 ".\objects\timers.o"
 ".\objects\tasks.o"
 ".\objects\heap_2.o"
+".\objects\mdr32f9qx_rst_clk.o"
+".\objects\mdr32f9qx_port.o"
 --strict --scatter ".\Objects\testFrm1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

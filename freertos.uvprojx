@@ -447,6 +447,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>Libs</GroupName>
+          <Files>
+            <File>
+              <FileName>MDR32F9Qx_rst_clk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libs\MDR32F9Qx_StdPeriph_Driver\src\MDR32F9Qx_rst_clk.c</FilePath>
+            </File>
+            <File>
+              <FileName>MDR32F9Qx_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libs\MDR32F9Qx_StdPeriph_Driver\src\MDR32F9Qx_port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>
