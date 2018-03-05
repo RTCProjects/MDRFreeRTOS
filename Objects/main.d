@@ -1,10 +1,15 @@
 .\objects\main.o: main.c
+.\objects\main.o: .\Libs\MDR32F9Qx_board.h
+.\objects\main.o: .\Libs\MDR32F9Qx_config.h
+.\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_lib.h
+.\objects\main.o: C:\Keil_v521A\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\Libs\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc\MDR32Fx.h
 .\objects\main.o: .\Libs\CMSIS\CM3\CoreSupport\core_cm3.h
-.\objects\main.o: C:\Keil_v521A\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\Libs\CMSIS\CM3\CoreSupport\core_cmInstr.h
 .\objects\main.o: .\Libs\CMSIS\CM3\CoreSupport\core_cmFunc.h
 .\objects\main.o: .\Libs\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.h
+.\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_rst_clk.h
+.\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_port.h
 .\objects\main.o: .\Libs\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\main.o: .\Libs\FreeRTOS\include\FreeRTOS.h
 .\objects\main.o: C:\Keil_v521A\ARM\ARMCC\Bin\..\include\stddef.h
