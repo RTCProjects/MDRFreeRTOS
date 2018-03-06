@@ -10,7 +10,6 @@
 .\objects\main.o: .\Libs\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.h
 .\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_rst_clk.h
 .\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_port.h
-.\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_can.h
 .\objects\main.o: .\Libs\FreeRTOS\include\FreeRTOSConfig.h
 .\objects\main.o: .\Libs\FreeRTOS\include\FreeRTOS.h
 .\objects\main.o: C:\Keil_v521A\ARM\ARMCC\Bin\..\include\stddef.h
@@ -21,3 +20,7 @@
 .\objects\main.o: .\Libs\FreeRTOS\include\mpu_wrappers.h
 .\objects\main.o: .\Libs\FreeRTOS\include\task.h
 .\objects\main.o: .\Libs\FreeRTOS\include\list.h
+.\objects\main.o: .\inc\can.h
+.\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_can.h
+.\objects\main.o: .\Libs\FreeRTOS\include\queue.h
+.\objects\main.o: C:\Keil_v521A\ARM\ARMCC\Bin\..\include\string.h

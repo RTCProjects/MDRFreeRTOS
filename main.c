@@ -4,21 +4,31 @@
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_rst_clk.h"
 #include "MDR32F9Qx_port.h"
-#include "MDR32F9Qx_can.h"
 
 #include "FreeRTOSConfig.h"
 #include "FreeRTOS.h"
 
 #include "task.h"
+#include "can.h"
+
+
 
 void vLed1(void *argument)
 {
+	
+	
     while(1)
     {
-        PORT_SetBits(MDR_PORTC, PORT_Pin_0);
+      /*  PORT_SetBits(MDR_PORTC, PORT_Pin_0);
         vTaskDelay(100);
         PORT_ResetBits(MDR_PORTC, PORT_Pin_0);
         vTaskDelay(100);
+			*/
+			PORT_SetBits(MDR_PORTC, PORT_Pin_0);
+			CAN_SendData(0x321,0,2048);
+			PORT_ResetBits(MDR_PORTC, PORT_Pin_0);
+			vTaskDelay(1000);
+			//CAN_Transmit(MDR_CAN1, CAN_BUFFER_2, &TxMsg);
     }
 }
 
@@ -89,31 +99,7 @@ void Clock_Init()
 	}
 }
 
- void CAN_PerifInit()
-{
-	CAN_InitTypeDef  sCAN;
-	
-	RST_CLK_PCLKcmd(RST_CLK_PCLK_CAN1,ENABLE);
-	
-	CAN_BRGInit(MDR_CAN1,CAN_HCLKdiv1);
-	  
-	CAN_StructInit (&sCAN);
-	
-	sCAN.CAN_ROP  = DISABLE;
-  sCAN.CAN_SAP  = ENABLE;
-  sCAN.CAN_STM  = DISABLE;
-  sCAN.CAN_ROM  = DISABLE;
-  sCAN.CAN_PSEG = CAN_PSEG_Mul_2TQ;
-  sCAN.CAN_SEG1 = CAN_SEG1_Mul_7TQ;
-  sCAN.CAN_SEG2 = CAN_SEG2_Mul_6TQ;
-  sCAN.CAN_SJW  = CAN_SJW_Mul_4TQ;
-  sCAN.CAN_SB   = CAN_SB_1_SAMPLE;
-  sCAN.CAN_BRP  = 7;
-  CAN_Init (MDR_CAN1,&sCAN);
-  CAN_Cmd(MDR_CAN1, ENABLE);
 
-
-}
 
 int main()
 {

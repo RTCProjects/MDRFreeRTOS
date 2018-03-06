@@ -2,6 +2,7 @@
 ".\objects\startup_mdr32f9qx.o"
 ".\objects\system_mdr32f9qx.o"
 ".\objects\main.o"
+".\objects\can.o"
 ".\objects\croutine.o"
 ".\objects\event_groups.o"
 ".\objects\list.o"

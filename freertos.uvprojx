@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Libs\CMSIS\CM3\CoreSupport;.\Libs\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc;.\Libs\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm;.\Libs\MDR32F9Qx_StdPeriph_Driver\inc;.\Libs;.\Libs\FreeRTOS\include</IncludePath>
+              <IncludePath>.\Libs\CMSIS\CM3\CoreSupport;.\Libs\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc;.\Libs\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm;.\Libs\MDR32F9Qx_StdPeriph_Driver\inc;.\Libs;.\Libs\FreeRTOS\include;.\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -399,6 +399,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\src\can.c</FilePath>
             </File>
           </Files>
         </Group>
