@@ -20,3 +20,7 @@
 .\objects\main.o: .\Libs\FreeRTOS\include\mpu_wrappers.h
 .\objects\main.o: .\Libs\FreeRTOS\include\task.h
 .\objects\main.o: .\Libs\FreeRTOS\include\list.h
+.\objects\main.o: .\inc\can.h
+.\objects\main.o: .\Libs\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_can.h
+.\objects\main.o: .\Libs\FreeRTOS\include\queue.h
+.\objects\main.o: C:\Keil_v521A\ARM\ARMCC\Bin\..\include\string.h
